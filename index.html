@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GameZone.ht — Installation Pro de Jeux PC à Delmas 75</title>
+<meta name="description" content="GameZone.ht — Service d'installation professionnelle de jeux vidéo PC à Delmas 75, Haïti. Large catalogue, tarifs clairs à partir de 750 Gdes."/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>"/>
+<meta property="og:title" content="GameZone.ht — Installation Pro de Jeux PC"/>
+<meta property="og:description" content="Service d'installation de jeux vidéo PC à Delmas 75, Haïti. Tarifs à partir de 750 Gdes."/>
+<meta property="og:image" content="images/acceuile.jpg"/>
+<meta property="og:type" content="website"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .cursor-blink { animation: blink 1s step-end infinite; }
+        .scanline {
+            width: 100%; height: 2px;
+            background: rgba(0, 255, 136, 0.05);
+            position: fixed; top: 0; left: 0; pointer-events: none; z-index: 50;
+            animation: scan 8s linear infinite;
+        }
+        @keyframes scan {
+            from { transform: translateY(-100vh); }
+            to { transform: translateY(100vh); }
+        }
+        .terminal-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(0, 255, 136, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(0, 255, 136, 0.05) 1px, transparent 1px);
+        }
+        .crt-overlay {
+            background: radial-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 100%),
+                        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 100%, 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+        body { cursor: crosshair; }
+
+        @keyframes slowZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+        .bg-zoom {
+            animation: slowZoom 20s ease-in-out infinite alternate;
+        }
+        .hero-container {
+            perspective: 1000px;
+        }
+        .tilt-card {
+            transition: transform 0.1s ease-out;
+            transform-style: preserve-3d;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#005228",
+                        "on-background": "#dee2ec",
+                        "on-tertiary-container": "#795f01",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#dee2ec",
+                        "surface-bright": "#343941",
+                        "inverse-surface": "#dee2ec",
+                        "secondary-fixed": "#61ff98",
+                        "on-primary-fixed": "#00210c",
+                        "on-primary-container": "#007139",
+                        "on-surface-variant": "#b9cbb9",
+                        "tertiary-fixed-dim": "#e5c364",
+                        "on-secondary-fixed-variant": "#005227",
+                        "on-secondary-container": "#004f25",
+                        "surface-container-lowest": "#090f15",
+                        "surface-dim": "#0f141b",
+                        "surface-tint": "#00e479",
+                        "on-secondary": "#003919",
+                        "primary-container": "#00ff88",
+                        "error": "#ffb4ab",
+                        "inverse-primary": "#006d37",
+                        "tertiary": "#fffaf7",
+                        "surface-container": "#1b2027",
+                        "error-container": "#93000a",
+                        "surface": "#0f141b",
+                        "secondary-container": "#00cb69",
+                        "secondary": "#3fe882",
+                        "on-error": "#690005",
+                        "surface-container-low": "#171c23",
+                        "tertiary-container": "#ffdb79",
+                        "background": "#0f141b",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "outline": "#849585",
+                        "on-secondary-fixed": "#00210c",
+                        "surface-variant": "#30353d",
+                        "on-tertiary": "#3d2f00",
+                        "secondary-fixed-dim": "#37e27d",
+                        "on-tertiary-fixed": "#241a00",
+                        "inverse-on-surface": "#2c3138",
+                        "outline-variant": "#3b4b3d",
+                        "surface-container-high": "#252a32",
+                        "primary-fixed-dim": "#00e479",
+                        "on-primary": "#003919",
+                        "tertiary-fixed": "#ffe08d",
+                        "surface-container-highest": "#30353d",
+                        "primary-fixed": "#60ff99",
+                        "primary": "#f1ffef"
+                    },
+                    "borderRadius": { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                    "spacing": { "xl": "64px", "lg": "40px", "xs": "8px", "md": "24px", "sm": "16px", "margin": "24px", "base": "4px", "gutter": "16px" },
+                    "fontFamily": {
+                        "headline-lg": ["Bebas Neue"], "headline-xl": ["Bebas Neue"], "headline-md": ["Bebas Neue"],
+                        "body-lg": ["JetBrains Mono"], "code-sm": ["JetBrains Mono"], "body-md": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Bebas Neue"], "label-md": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                        "headline-xl": ["64px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "code-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "body-md": ["14px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<div class="scanline"></div>
+<div class="crt-overlay fixed inset-0 z-40 pointer-events-none opacity-20"></div>
+<!-- Header Section (TopNavBar) -->
+<header class="fixed top-0 z-50 w-full bg-background/90 backdrop-blur-md border-b border-outline-variant/30 shadow-[0_0_8px_0px_rgba(0,255,136,0.2)]">
+<nav class="flex justify-between items-center w-full px-margin py-xs max-w-full mx-auto">
+<div class="font-headline-md text-headline-md text-primary tracking-tighter">[ GameZone.ht ]</div>
+<div class="hidden md:flex gap-gutter items-center" id="desktop-nav">
+<a class="nav-link text-primary font-bold border-b border-primary pb-1 font-label-md text-label-md" href="#catalog">MISSIONS</a>
+<a class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#upcoming">A_VENIR</a>
+<a class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#faq">FAQ</a>
+<a class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#comm">COMM_LINK</a>
+</div>
+<div class="flex items-center gap-sm">
+<a class="hidden md:inline-block bg-primary/10 border border-primary text-primary px-sm py-xs font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all active:scale-95" href="https://wa.me/50933428510?text=Bonjour%20GameZone.ht%2C%20je%20voudrais%20commander%20des%20jeux%20PC." target="_blank">>> COMMANDER</a>
+<button class="md:hidden flex flex-col justify-center gap-[5px] p-xs border border-primary/40 hover:border-primary transition-colors" id="hamburger-btn" aria-label="Ouvrir le menu">
+<span class="block w-[22px] h-[2px] bg-primary transition-all duration-300 origin-center" id="hb1"></span>
+<span class="block w-[22px] h-[2px] bg-primary transition-all duration-300" id="hb2"></span>
+<span class="block w-[22px] h-[2px] bg-primary transition-all duration-300 origin-center" id="hb3"></span>
+</button>
+</div>
+</nav>
+</header>
+<!-- Mobile Menu Overlay -->
+<div class="fixed inset-0 z-40 bg-background/97 backdrop-blur-md flex-col items-center justify-center gap-lg hidden" id="mobile-menu">
+<div class="absolute top-0 left-0 right-0 h-px bg-primary/30"></div>
+<div class="font-code-sm text-code-sm text-primary/40 mb-lg tracking-widest animate-pulse">// NAVIGATION_MENU</div>
+<nav class="flex flex-col items-center gap-lg">
+<a class="mobile-nav-link font-headline-xl text-headline-xl text-primary hover:text-secondary transition-colors tracking-widest" href="#catalog">MISSIONS</a>
+<a class="mobile-nav-link font-headline-xl text-headline-xl text-on-surface-variant hover:text-primary transition-colors tracking-widest" href="#upcoming">A_VENIR</a>
+<a class="mobile-nav-link font-headline-xl text-headline-xl text-on-surface-variant hover:text-primary transition-colors tracking-widest" href="#faq">FAQ</a>
+<a class="mobile-nav-link font-headline-xl text-headline-xl text-on-surface-variant hover:text-primary transition-colors tracking-widest" href="#comm">COMM_LINK</a>
+</nav>
+<a class="mt-lg border-2 border-secondary text-secondary px-xl py-md font-headline-md text-headline-md hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Bonjour%20GameZone.ht%2C%20je%20voudrais%20commander%20des%20jeux%20PC." target="_blank">>> COMMANDER</a>
+<div class="absolute bottom-10 font-code-sm text-code-sm text-primary/30 animate-pulse">STATUS: ONLINE</div>
+</div>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-center items-center overflow-hidden hero-container" id="hero">
+<!-- Background Layer -->
+<div class="absolute inset-0 z-0">
+<img alt="Gaming Background" class="w-full h-full object-cover bg-zoom opacity-60" src="images/acceuile.jpg"/>
+<!-- Overlay for readability & aesthetic -->
+<div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background"></div>
+<div class="absolute inset-0 bg-primary/5 mix-blend-overlay"></div>
+<div class="absolute inset-0 terminal-grid opacity-30 pointer-events-none"></div>
+</div>
+<!-- Content Layer -->
+<div class="relative z-10 max-w-4xl px-margin text-center tilt-card" id="tilt-content">
+<div class="mb-sm flex items-center justify-center gap-base">
+<span class="text-primary font-code-sm text-code-sm">&gt;</span>
+<span class="text-on-surface-variant font-code-sm text-code-sm" id="typing-text"></span>
+<span class="w-2 h-4 bg-primary cursor-blink inline-block"></span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary drop-shadow-[0_0_20px_rgba(0,255,136,0.8)] mb-md">GAME ON.</h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-2xl mx-auto mb-lg border-l-2 border-primary pl-md py-xs bg-surface-container/60 backdrop-blur-sm">
+            La destination ultime pour l'installation de jeux PC haute performance à Delmas 75. Optimisé pour les vrais gamers.
+        </p>
+<a class="inline-block border border-primary text-primary px-xl py-sm font-headline-md text-headline-md hover:bg-primary hover:text-background hover:shadow-[0_0_30px_rgba(0,255,136,0.6)] transition-all transform hover:-translate-y-1 bg-background/50 backdrop-blur-sm" href="#catalog">
+            &gt; VOIR LES JEUX
+        </a>
+</div>
+<div class="absolute bottom-10 left-margin font-code-sm text-code-sm text-primary/60 animate-pulse z-10">
+        LATENCY: 14ms<br/>
+        PACKET LOSS: 0%<br/>
+        STATUS: SECURE_LINK_ESTABLISHED
+    </div>
+</section>
+<!-- Catalogue Section -->
+<section class="py-xl bg-surface" id="catalog">
+<div class="px-margin max-w-7xl mx-auto">
+<div class="flex items-center gap-sm mb-md border-b border-outline-variant/30 pb-xs">
+<h2 class="font-headline-lg text-headline-lg text-primary">&gt; JEUX_PC.LIST</h2>
+<div class="flex-grow h-[1px] bg-outline-variant/30"></div>
+<span class="text-on-surface-variant font-code-sm text-code-sm opacity-50" id="game-count">18 RECORDS FOUND</span>
+</div>
+<!-- Filtres par genre -->
+<div class="flex flex-wrap gap-xs mb-lg" id="filter-bar">
+<button class="filter-btn active-filter border border-primary bg-primary/10 text-primary px-sm py-xs font-label-md text-label-md transition-all hover:bg-primary hover:text-background" data-filter="all">ALL</button>
+<button class="filter-btn border border-outline-variant text-on-surface-variant px-sm py-xs font-label-md text-label-md transition-all hover:border-primary hover:text-primary" data-filter="fps">FPS</button>
+<button class="filter-btn border border-outline-variant text-on-surface-variant px-sm py-xs font-label-md text-label-md transition-all hover:border-primary hover:text-primary" data-filter="sport">SPORT</button>
+<button class="filter-btn border border-outline-variant text-on-surface-variant px-sm py-xs font-label-md text-label-md transition-all hover:border-primary hover:text-primary" data-filter="action">ACTION</button>
+<button class="filter-btn border border-outline-variant text-on-surface-variant px-sm py-xs font-label-md text-label-md transition-all hover:border-primary hover:text-primary" data-filter="combat">COMBAT</button>
+<button class="filter-btn border border-outline-variant text-on-surface-variant px-sm py-xs font-label-md text-label-md transition-all hover:border-primary hover:text-primary" data-filter="racing">RACING</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter" id="game-grid">
+<!-- Game Card 1 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="sport">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="FIFA 19" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/fifa19.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2019</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">FIFA 19</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>SIZE: 65GB</span>
+<span>VER: 1.0.2</span>
+</div>
+<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">
+                        $ DEMANDER_PRIX
+                    </button>
+</div>
+</div>
+<!-- Game Card 2 - FIFA 13 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="FIFA 13" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/fifa13.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2013</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">FIFA 13</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>SIZE: 35GB</span>
+<span>VER: 1.0.0</span>
+</div>
+<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">
+                        $ DEMANDER_PRIX
+                    </button>
+</div>
+</div>
+<!-- Game Card 3 - FIFA 11 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="FIFA 11" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/FIFA11.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2011</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">FIFA 11</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>SIZE: 15GB</span>
+<span>VER: 1.0.0</span>
+</div>
+<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">
+                        $ DEMANDER_PRIX
+                    </button>
+</div>
+</div>
+<!-- Game Card 4 - PROTOTYPE 1 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="PROTOTYPE 1" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/prototype1.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">BETA</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">PROTOTYPE 1</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>SIZE: 50GB</span>
+<span>VER: 0.1.0</span>
+</div>
+<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">
+                        $ DEMANDER_PRIX
+                    </button>
+</div>
+</div>
+<!-- Game Card 5 - PROTOTYPE 2 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="PROTOTYPE 2" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Prototype2.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">BETA</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">PROTOTYPE 2</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>SIZE: 55GB</span>
+<span>VER: 0.2.0</span>
+</div>
+<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">
+                        $ DEMANDER_PRIX
+                    </button>
+</div>
+</div>
+<!-- COD MW3 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="COD MW3" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Call_of_Duty_MW3.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2011</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">COD MW3</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>SIZE: 120GB</span>
+<span>VER: 4.1.0</span>
+</div>
+<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+</div>
+</div>
+<!-- Call of Duty 4 Modern Warfare -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="COD 4 Modern Warfare" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Call_of_Duty4_Modern_Warfare.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2007</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">COD 4 Modern Warfare</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>SIZE: 18GB</span>
+<span>VER: 1.7</span>
+</div>
+<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+</div>
+</div>
+<!-- Call of Duty Black Ops 1 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="COD Black Ops 1" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Call_of_Duty_Black_Ops1.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2010</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">COD Black Ops 1</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>SIZE: 20GB</span>
+<span>VER: 1.13</span>
+</div>
+<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+</div>
+</div>
+<!-- Call of Duty MW2 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="COD MW2" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Call_of_duty_MW2.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2009</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">COD MW2</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>SIZE: 20GB</span>
+<span>VER: 1.14</span>
+</div>
+<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+</div>
+</div>
+<!-- Call of Duty World at War -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="COD World at War" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Call_of_Duty_World_at_Wart.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2008</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">COD World at War</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>SIZE: 18GB</span>
+<span>VER: 1.7</span>
+</div>
+<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+</div>
+</div>
+<!-- Call of Duty 2 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="COD 2" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/call of duty 2.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2005</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">COD 2</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>SIZE: 16GB</span>
+<span>VER: 1.3</span>
+</div>
+<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+</div>
+</div>
+<!-- NBA 2K19 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="NBA 2K19" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/NBA-2K19.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2018</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">NBA 2K19</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>SIZE: 130GB</span>
+<span>VER: 1.0</span>
+</div>
+<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+</div>
+</div>
+<!-- Mortal Kombat -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="Mortal Kombat" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Mortal-kombat.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2011</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">MORTAL KOMBAT</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>SIZE: 40GB</span>
+<span>VER: ULTIMATE</span>
+</div>
+<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+</div>
+</div>
+<!-- Mortal Kombat X -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="Mortal Kombat X" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Mortal-Kombat-X.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2015</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">MORTAL KOMBAT X</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>SIZE: 50GB</span>
+<span>VER: ULTIMATE</span>
+</div>
+<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+</div>
+</div>
+<!-- Need for Speed Most Wanted -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="Need for Speed Most Wanted" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Need-For-Speed-Most-Wanted.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2012</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">NFS MOST WANTED</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>SIZE: 30GB</span>
+<span>VER: 1.0.1</span>
+</div>
+<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+</div>
+</div>
+<!-- Grand Theft Auto IV -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="GTA IV" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Grand-Theft-Auto-IV.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2008</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">GTA IV</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>SIZE: 15GB</span>
+<span>VER: COMPLETE</span>
+</div>
+<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+</div>
+</div>
+<!-- Shank 1 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="Shank 1" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Shank-1.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2010</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">SHANK 1</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>SIZE: 3GB</span>
+<span>VER: 1.0</span>
+</div>
+<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+</div>
+</div>
+<!-- Zombie Shooter -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="Zombie Shooter" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/zombie-shooter.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2012</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">ZOMBIE SHOOTER</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>SIZE: 2GB</span>
+<span>VER: 1.0</span>
+</div>
+<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming Games Section -->
+<section class="py-xl bg-background border-t border-outline-variant/20" id="upcoming">
+<div class="px-margin max-w-7xl mx-auto">
+<div class="flex items-center gap-sm mb-lg border-b border-outline-variant/30 pb-xs">
+<h2 class="font-headline-lg text-headline-lg text-primary">&gt; INCOMING_PAYLOADS.EXE // JEUX À VENIR</h2>
+<div class="flex-grow h-[1px] bg-outline-variant/30"></div>
+<span class="text-secondary font-code-sm text-code-sm animate-pulse">SYSTEM STATUS: LOADING FUTURE RELEASES...</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Game 1: GTA 6 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="GTA VI" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/gta6_cover.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2026</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">GTA VI</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>EST_SIZE: ~150GB</span>
+<span>GENRE: ACTION</span>
+</div>
+<span class="block w-full text-center border border-secondary/50 text-secondary py-xs text-[11px] font-code-sm bg-secondary/5">
+                        [ STATUS: DECRYPTED // INCOMING ]
+                    </span>
+</div>
+</div>
+<!-- Game 2: Black Ops 6 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<div class="relative aspect-[3/4] overflow-hidden mb-xs">
+<img alt="Call of Duty Black Ops 6" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/bo6_cover.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">SOON</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary font-bold text-body-md truncate">COD BLACK OPS 6</h3>
+<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
+<span>EST_SIZE: ~130GB</span>
+<span>GENRE: FPS</span>
+</div>
+<span class="block w-full text-center border border-secondary/50 text-secondary py-xs text-[11px] font-code-sm bg-secondary/5">
+                        [ STATUS: READY // DEPLOYING ]
+                    </span>
+</div>
+</div>
+<!-- Game 3: Assassin's Creed Shadows -->
+<div class="group border border-outline-variant/30 bg-surface-container-low/50 p-base hover:border-primary/50 transition-colors">
+<div class="relative aspect-[3/4] bg-surface-container-high flex flex-col items-center justify-center mb-xs border border-dashed border-outline-variant/30">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
+<span class="material-symbols-outlined text-[48px] text-primary/30 group-hover:text-primary transition-colors animate-pulse mb-sm">lock</span>
+<span class="text-primary/70 font-code-sm text-code-sm z-10 group-hover:text-primary transition-colors">DATA LOCK [ SHADOWS ]</span>
+<div class="absolute bottom-base left-base bg-primary/30 text-primary text-[10px] px-xs font-bold">Q4 2026</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary/70 group-hover:text-primary transition-colors font-bold text-body-md truncate">AC SHADOWS</h3>
+<div class="flex justify-between text-on-surface-variant/70 font-code-sm text-code-sm mt-xs mb-sm">
+<span>EST_SIZE: ~100GB</span>
+<span>GENRE: ACTION/RPG</span>
+</div>
+<span class="block w-full text-center border border-outline-variant/30 text-on-surface-variant/70 py-xs text-[11px] font-code-sm">
+                        [ STATUS: CLASSIFIED // QUEUED ]
+                    </span>
+</div>
+</div>
+<!-- Game 4: Monster Hunter Wilds -->
+<div class="group border border-outline-variant/30 bg-surface-container-low/50 p-base hover:border-primary/50 transition-colors">
+<div class="relative aspect-[3/4] bg-surface-container-high flex flex-col items-center justify-center mb-xs border border-dashed border-outline-variant/30">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
+<span class="material-symbols-outlined text-[48px] text-primary/30 group-hover:text-primary transition-colors animate-pulse mb-sm">lock</span>
+<span class="text-primary/70 font-code-sm text-code-sm z-10 group-hover:text-primary transition-colors">DATA LOCK [ MH_WILDS ]</span>
+<div class="absolute bottom-base left-base bg-primary/30 text-primary text-[10px] px-xs font-bold">SOON</div>
+</div>
+<div class="px-xs pb-xs">
+<h3 class="text-primary/70 group-hover:text-primary transition-colors font-bold text-body-md truncate">MH WILDS</h3>
+<div class="flex justify-between text-on-surface-variant/70 font-code-sm text-code-sm mt-xs mb-sm">
+<span>EST_SIZE: ~90GB</span>
+<span>GENRE: ACTION/RPG</span>
+</div>
+<span class="block w-full text-center border border-outline-variant/30 text-on-surface-variant/70 py-xs text-[11px] font-code-sm">
+                        [ STATUS: CLASSIFIED // QUEUED ]
+                    </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-xl bg-surface border-t border-outline-variant/20" id="faq">
+<div class="px-margin max-w-4xl mx-auto">
+<div class="flex items-center gap-sm mb-lg border-b border-outline-variant/30 pb-xs">
+<h2 class="font-headline-lg text-headline-lg text-primary">&gt; FAQ // KNOWLEDGE_BASE.INI</h2>
+<div class="flex-grow h-[1px] bg-outline-variant/30"></div>
+<span class="text-on-surface-variant font-code-sm text-code-sm opacity-50">5 SYSTEM QUESTIONS FOUND</span>
+</div>
+<div class="space-y-sm">
+<!-- FAQ Item 1 -->
+<div class="border border-outline-variant/30 bg-surface-container-low transition-colors hover:border-primary/50">
+<button class="w-full flex justify-between items-center p-md text-left text-primary font-bold font-body-md hover:bg-primary/5 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+<span>Q: Comment se déroule l'installation d'un jeu ?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-md text-on-surface-variant border-t border-transparent font-code-sm text-code-sm">
+<div class="py-md">
+                        Vous apportez votre PC portable ou votre disque dur externe à notre local situé à Delmas 75. Nous installons les fichiers complets du jeu, configurons les fichiers de lancement (launchers), installons les pilotes système requis et testons le jeu pour garantir qu'il démarre correctement et fonctionne au maximum de sa fluidité.
+                    </div>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="border border-outline-variant/30 bg-surface-container-low transition-colors hover:border-primary/50">
+<button class="w-full flex justify-between items-center p-md text-left text-primary font-bold font-body-md hover:bg-primary/5 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+<span>Q: Mon PC est-il assez puissant pour faire tourner vos jeux ?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-md text-on-surface-variant border-t border-transparent font-code-sm text-code-sm">
+<div class="py-md">
+                        Chaque carte de jeu sur notre site contient les spécifications de taille. En cas de doute, notre équipe effectue un diagnostic système gratuit de votre ordinateur (carte graphique GPU, processeur CPU et mémoire RAM) au moment du dépôt pour valider si le jeu fonctionnera dans de bonnes conditions.
+                    </div>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="border border-outline-variant/30 bg-surface-container-low transition-colors hover:border-primary/50">
+<button class="w-full flex justify-between items-center p-md text-left text-primary font-bold font-body-md hover:bg-primary/5 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+<span>Q: Puis-je demander un jeu non listé dans le catalogue ?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-md text-on-surface-variant border-t border-transparent font-code-sm text-code-sm">
+<div class="py-md">
+                        Absolument ! Si vous souhaitez installer un jeu qui ne figure pas encore dans notre catalogue actuel, cliquez sur le bouton "COMMANDER" pour nous envoyer le nom du jeu sur WhatsApp. Nous le téléchargerons et l'installerons sur votre machine lors de votre visite.
+                    </div>
+</div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="border border-outline-variant/30 bg-surface-container-low transition-colors hover:border-primary/50">
+<button class="w-full flex justify-between items-center p-md text-left text-primary font-bold font-body-md hover:bg-primary/5 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+<span>Q: Quels sont les moyens de paiement acceptés ?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-md text-on-surface-variant border-t border-transparent font-code-sm text-code-sm">
+<div class="py-md">
+                        Nous acceptons les paiements via MonCash, par transfert bancaire direct et en espèces lors du dépôt de votre PC ou de votre disque de stockage.
+                    </div>
+</div>
+</div>
+<!-- FAQ Item 5 -->
+<div class="border border-outline-variant/30 bg-surface-container-low transition-colors hover:border-primary/50">
+<button class="w-full flex justify-between items-center p-md text-left text-primary font-bold font-body-md hover:bg-primary/5 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+<span>Q: Y a-t-il un support après l'installation ?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-md text-on-surface-variant border-t border-transparent font-code-sm text-code-sm">
+<div class="py-md">
+                        Oui, toutes les installations bénéficient d'un support technique gratuit de 24h. Si un problème d'incompatibilité, de pilote ou d'exécution survient lors du premier lancement chez vous, nous intervenons à distance ou vous pouvez repasser en atelier pour corriger la situation.
+                    </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-xl bg-surface-container-lowest terminal-grid" id="comm">
+<div class="px-margin max-w-4xl mx-auto text-center border border-primary/20 py-xl relative">
+<div class="absolute top-0 left-0 p-xs border-r border-b border-primary/20 font-code-sm text-[10px] text-primary/30">COM_MODULE_v2.1</div>
+<h2 class="font-headline-xl text-headline-xl text-primary mb-md tracking-widest">&gt;&gt; CONTACT</h2>
+<p class="text-on-surface-variant font-body-md text-body-md mb-lg">
+            PRÊT À METTRE À JOUR VOTRE BIBLIOTHÈQUE ?<br/>
+            NOTRE TERMINAL DE COMMANDE EST OUVERT.
+        </p>
+<div class="flex flex-col md:flex-row justify-center gap-md items-center">
+<a class="group flex items-center gap-sm border-2 border-secondary text-secondary px-lg py-md font-headline-md text-headline-md hover:bg-secondary hover:text-background transition-all shadow-[0_0_15px_rgba(0,204,105,0.3)] active:scale-95" href="https://wa.me/50933428510?text=Bonjour%20GameZone.ht%2C%20je%20voudrais%20commander%20des%20jeux%20PC." target="_blank">
+<span class="material-symbols-outlined">message</span>
+                WHATSAPP COMMANDER
+            </a>
+<div class="text-left font-code-sm text-code-sm text-on-surface-variant border-l border-outline-variant pl-md">
+<span class="text-primary font-bold">LOCALISATION:</span> Delmas 75, Haïti<br/>
+<span class="text-primary font-bold">HORAIRES:</span> 09:00 - 20:00<br/>
+<span class="text-primary font-bold">STATUS:</span> <span class="text-secondary">ONLINE</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bouton Retour en haut -->
+<button class="fixed bottom-6 right-6 z-50 bg-surface-container border border-primary text-primary w-12 h-12 flex items-center justify-center font-headline-md hover:bg-primary hover:text-background transition-all duration-300 opacity-0 translate-y-4 pointer-events-none shadow-[0_0_12px_rgba(0,255,136,0.3)]" id="back-to-top" aria-label="Retour en haut" title="Retour en haut">▲</button>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin py-md gap-gutter max-w-full mx-auto">
+<div class="font-headline-lg text-headline-lg text-primary tracking-tighter">GAMEZONE.HT</div>
+<div class="text-secondary font-code-sm text-code-sm text-center md:text-left">
+            © 2024 GAMEZONE.HT // SYSTEM_READY
+        </div>
+<div class="flex gap-md">
+<a class="text-on-surface-variant opacity-60 font-label-md text-label-md hover:text-secondary-fixed hover:opacity-100 transition-opacity" href="#">SUPPORT</a>
+<a class="text-on-surface-variant opacity-60 font-label-md text-label-md hover:text-secondary-fixed hover:opacity-100 transition-opacity" href="#">PROTOCOL</a>
+<a class="text-on-surface-variant opacity-60 font-label-md text-label-md hover:text-secondary-fixed hover:opacity-100 transition-opacity" href="#">TERMINAL_HELP</a>
+</div>
+</div>
+</footer>
+<script>
+    // ---- MAPPING GENRES ----
+    const genreMap = {
+        'FIFA': 'sport', 'NBA': 'sport',
+        'COD': 'fps', 'ZOMBIE': 'fps',
+        'MORTAL': 'combat',
+        'NFS': 'racing',
+        'GTA': 'action', 'PROTOTYPE': 'action', 'SHANK': 'action'
+    };
+
+    // Assignation automatique des genres aux cartes
+    document.querySelectorAll('#game-grid > div').forEach(card => {
+        const title = card.querySelector('h3')?.textContent.toUpperCase() || '';
+        let genre = 'action';
+        for (const [key, val] of Object.entries(genreMap)) {
+            if (title.includes(key)) { genre = val; break; }
+        }
+        card.setAttribute('data-genre', genre);
+    });
+
+    // ---- FILTRES ----
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const gameCards = document.querySelectorAll('#game-grid > div');
+    const gameCount = document.getElementById('game-count');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.getAttribute('data-filter');
+            filterBtns.forEach(b => {
+                b.classList.remove('active-filter', 'bg-primary/10', 'border-primary', 'text-primary');
+                b.classList.add('border-outline-variant', 'text-on-surface-variant');
+            });
+            btn.classList.add('active-filter', 'bg-primary/10', 'border-primary', 'text-primary');
+            btn.classList.remove('border-outline-variant', 'text-on-surface-variant');
+            let visible = 0;
+            gameCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-genre') === filter) {
+                    card.style.display = '';
+                    visible++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            if (gameCount) gameCount.textContent = visible + ' RECORDS FOUND';
+        });
+    });
+
+    // ---- TYPING EFFECT ----
+    const textToType = "> Installation de jeux PC à Delmas 75...";
+    const element = document.getElementById('typing-text');
+    let index = 0;
+    function type() {
+        if (index < textToType.length) {
+            element.textContent += textToType.charAt(index);
+            index++;
+            setTimeout(type, 50);
+        }
+    }
+    window.addEventListener('load', () => setTimeout(type, 1000));
+
+    // ---- TILT 3D ----
+    const hero = document.getElementById('hero');
+    const tiltContent = document.getElementById('tilt-content');
+    hero.addEventListener('mousemove', (e) => {
+        const { width, height } = hero.getBoundingClientRect();
+        const rotateX = ((e.clientY - hero.offsetTop - height / 2) / (height / 2)) * -5;
+        const rotateY = ((e.clientX - hero.offsetLeft - width / 2) / (width / 2)) * 5;
+        tiltContent.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(50px)`;
+    });
+    hero.addEventListener('mouseleave', () => {
+        tiltContent.style.transform = 'rotateX(0) rotateY(0) translateZ(0)';
+    });
+
+    // ---- SMOOTH SCROLL ----
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                closeMobileMenu();
+                window.scrollTo({ top: target.offsetTop - 60, behavior: 'smooth' });
+            }
+        });
+    });
+
+    // ---- FAQ ACCORDION ----
+    window.toggleFaq = function(btn) {
+        const item = btn.parentElement;
+        const content = item.querySelector('.faq-content');
+        const icon = btn.querySelector('.faq-icon');
+        const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+        // Close all other items first for a clean accordion effect
+        document.querySelectorAll('.faq-content').forEach(el => {
+            el.style.maxHeight = '0px';
+            el.previousElementSibling.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+            el.parentElement.classList.remove('border-primary/50');
+            el.classList.add('border-transparent');
+        });
+
+        if (!isOpen) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            icon.style.transform = 'rotate(180deg)';
+            item.classList.add('border-primary/50');
+            content.classList.remove('border-transparent');
+            content.classList.add('border-outline-variant/10');
+        }
+    }
+
+    // ---- NAV ACTIVE LINKS ----
+    const sections = ['catalog', 'upcoming', 'faq', 'comm'];
+    const navLinks = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(id => {
+            const el = document.getElementById(id);
+            if (el && window.pageYOffset >= el.offsetTop - 200) current = id;
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('text-primary', 'font-bold', 'border-b', 'border-primary', 'pb-1');
+            link.classList.add('text-on-surface-variant');
+            if (current && link.getAttribute('href') === '#' + current) {
+                link.classList.add('text-primary', 'font-bold', 'border-b', 'border-primary', 'pb-1');
+                link.classList.remove('text-on-surface-variant');
+            }
+        });
+        // Bouton retour en haut
+        const backBtn = document.getElementById('back-to-top');
+        if (window.pageYOffset > 400) {
+            backBtn.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+            backBtn.classList.add('opacity-100', 'translate-y-0');
+        } else {
+            backBtn.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+            backBtn.classList.remove('opacity-100', 'translate-y-0');
+        }
+    });
+
+    // ---- RETOUR EN HAUT ----
+    document.getElementById('back-to-top').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ---- MENU HAMBURGER ----
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hb1 = document.getElementById('hb1');
+    const hb2 = document.getElementById('hb2');
+    const hb3 = document.getElementById('hb3');
+    let menuOpen = false;
+
+    function closeMobileMenu() {
+        menuOpen = false;
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+        hb1.style.transform = '';
+        hb2.style.opacity = '';
+        hb3.style.transform = '';
+        document.body.style.overflow = '';
+    }
+
+    hamburgerBtn?.addEventListener('click', () => {
+        menuOpen = !menuOpen;
+        if (menuOpen) {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('flex');
+            hb1.style.transform = 'rotate(45deg) translateY(7px)';
+            hb2.style.opacity = '0';
+            hb3.style.transform = 'rotate(-45deg) translateY(-7px)';
+            document.body.style.overflow = 'hidden';
+        } else {
+            closeMobileMenu();
+        }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+</script>
+</body></html>
