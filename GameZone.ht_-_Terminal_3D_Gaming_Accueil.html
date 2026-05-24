@@ -1,136 +1,136 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="fr"><head>
+<html class="dark" lang="fr">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>GameZone.ht — Installation Pro de Jeux PC à Delmas 75</title>
-<meta name="description" content="GameZone.ht — Service d'installation professionnelle de jeux vidéo PC à Delmas 75, Haïti. Large catalogue, tarifs clairs à partir de 750 Gdes."/>
+<meta name="description" content="GameZone.ht — Service d'installation professionnelle de jeux vidéo PC à Delmas 75, Haïti. Large catalogue, tarifs clairs à partir de 1000 Gdes."/>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>"/>
 <meta property="og:title" content="GameZone.ht — Installation Pro de Jeux PC"/>
-<meta property="og:description" content="Service d'installation de jeux vidéo PC à Delmas 75, Haïti. Tarifs à partir de 750 Gdes."/>
+<meta property="og:description" content="Service d'installation de jeux vidéo PC à Delmas 75, Haïti. Tarifs à partir de 1000 Gdes."/>
 <meta property="og:image" content="images/acceuile.jpg"/>
 <meta property="og:type" content="website"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <style>
-        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-        .cursor-blink { animation: blink 1s step-end infinite; }
-        .scanline {
-            width: 100%; height: 2px;
-            background: rgba(0, 255, 136, 0.05);
-            position: fixed; top: 0; left: 0; pointer-events: none; z-index: 50;
-            animation: scan 8s linear infinite;
-        }
-        @keyframes scan {
-            from { transform: translateY(-100vh); }
-            to { transform: translateY(100vh); }
-        }
-        .terminal-grid {
-            background-size: 40px 40px;
-            background-image: linear-gradient(to right, rgba(0, 255, 136, 0.05) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(0, 255, 136, 0.05) 1px, transparent 1px);
-        }
-        .crt-overlay {
-            background: radial-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 100%),
-                        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
-                        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-            background-size: 100% 100%, 100% 2px, 3px 100%;
-            pointer-events: none;
-        }
-        body { cursor: crosshair; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    .cursor-blink { animation: blink 1s step-end infinite; }
+    .scanline {
+        width: 100%; height: 2px;
+        background: rgba(0, 255, 136, 0.05);
+        position: fixed; top: 0; left: 0; pointer-events: none; z-index: 50;
+        animation: scan 8s linear infinite;
+    }
+    @keyframes scan {
+        from { transform: translateY(-100vh); }
+        to { transform: translateY(100vh); }
+    }
+    .terminal-grid {
+        background-size: 40px 40px;
+        background-image: linear-gradient(to right, rgba(0, 255, 136, 0.05) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(0, 255, 136, 0.05) 1px, transparent 1px);
+    }
+    .crt-overlay {
+        background: radial-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 100%),
+                    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+                    linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+        background-size: 100% 100%, 100% 2px, 3px 100%;
+        pointer-events: none;
+    }
+    body { cursor: crosshair; }
 
-        @keyframes slowZoom {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.1); }
-        }
-        .bg-zoom {
-            animation: slowZoom 20s ease-in-out infinite alternate;
-        }
-        .hero-container {
-            perspective: 1000px;
-        }
-        .tilt-card {
-            transition: transform 0.1s ease-out;
-            transform-style: preserve-3d;
-        }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    </style>
+    @keyframes slowZoom {
+        0% { transform: scale(1); }
+        100% { transform: scale(1.1); }
+    }
+    .bg-zoom {
+        animation: slowZoom 20s ease-in-out infinite alternate;
+    }
+    .hero-container {
+        perspective: 1000px;
+    }
+    .tilt-card {
+        transition: transform 0.1s ease-out;
+        transform-style: preserve-3d;
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-primary-fixed-variant": "#005228",
-                        "on-background": "#dee2ec",
-                        "on-tertiary-container": "#795f01",
-                        "on-error-container": "#ffdad6",
-                        "on-surface": "#dee2ec",
-                        "surface-bright": "#343941",
-                        "inverse-surface": "#dee2ec",
-                        "secondary-fixed": "#61ff98",
-                        "on-primary-fixed": "#00210c",
-                        "on-primary-container": "#007139",
-                        "on-surface-variant": "#b9cbb9",
-                        "tertiary-fixed-dim": "#e5c364",
-                        "on-secondary-fixed-variant": "#005227",
-                        "on-secondary-container": "#004f25",
-                        "surface-container-lowest": "#090f15",
-                        "surface-dim": "#0f141b",
-                        "surface-tint": "#00e479",
-                        "on-secondary": "#003919",
-                        "primary-container": "#00ff88",
-                        "error": "#ffb4ab",
-                        "inverse-primary": "#006d37",
-                        "tertiary": "#fffaf7",
-                        "surface-container": "#1b2027",
-                        "error-container": "#93000a",
-                        "surface": "#0f141b",
-                        "secondary-container": "#00cb69",
-                        "secondary": "#3fe882",
-                        "on-error": "#690005",
-                        "surface-container-low": "#171c23",
-                        "tertiary-container": "#ffdb79",
-                        "background": "#0f141b",
-                        "on-tertiary-fixed-variant": "#584400",
-                        "outline": "#849585",
-                        "on-secondary-fixed": "#00210c",
-                        "surface-variant": "#30353d",
-                        "on-tertiary": "#3d2f00",
-                        "secondary-fixed-dim": "#37e27d",
-                        "on-tertiary-fixed": "#241a00",
-                        "inverse-on-surface": "#2c3138",
-                        "outline-variant": "#3b4b3d",
-                        "surface-container-high": "#252a32",
-                        "primary-fixed-dim": "#00e479",
-                        "on-primary": "#003919",
-                        "tertiary-fixed": "#ffe08d",
-                        "surface-container-highest": "#30353d",
-                        "primary-fixed": "#60ff99",
-                        "primary": "#f1ffef"
-                    },
-                    "borderRadius": { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
-                    "spacing": { "xl": "64px", "lg": "40px", "xs": "8px", "md": "24px", "sm": "16px", "margin": "24px", "base": "4px", "gutter": "16px" },
-                    "fontFamily": {
-                        "headline-lg": ["Bebas Neue"], "headline-xl": ["Bebas Neue"], "headline-md": ["Bebas Neue"],
-                        "body-lg": ["JetBrains Mono"], "code-sm": ["JetBrains Mono"], "body-md": ["JetBrains Mono"],
-                        "headline-lg-mobile": ["Bebas Neue"], "label-md": ["JetBrains Mono"]
-                    },
-                    "fontSize": {
-                        "headline-lg": ["40px", {"lineHeight": "1.1", "fontWeight": "400"}],
-                        "headline-xl": ["64px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "400"}],
-                        "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "400"}],
-                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "code-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
-                        "body-md": ["14px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "headline-lg-mobile": ["32px", {"lineHeight": "1.1", "fontWeight": "400"}],
-                        "label-md": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "500"}]
-                    }
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "on-primary-fixed-variant": "#005228",
+                    "on-background": "#dee2ec",
+                    "on-tertiary-container": "#795f01",
+                    "on-error-container": "#ffdad6",
+                    "on-surface": "#dee2ec",
+                    "surface-bright": "#343941",
+                    "inverse-surface": "#dee2ec",
+                    "secondary-fixed": "#61ff98",
+                    "on-primary-fixed": "#00210c",
+                    "on-primary-container": "#007139",
+                    "on-surface-variant": "#b9cbb9",
+                    "tertiary-fixed-dim": "#e5c364",
+                    "on-secondary-fixed-variant": "#005227",
+                    "on-secondary-container": "#004f25",
+                    "surface-container-lowest": "#090f15",
+                    "surface-dim": "#0f141b",
+                    "surface-tint": "#00e479",
+                    "on-secondary": "#003919",
+                    "primary-container": "#00ff88",
+                    "error": "#ffb4ab",
+                    "inverse-primary": "#006d37",
+                    "tertiary": "#fffaf7",
+                    "surface-container": "#1b2027",
+                    "error-container": "#93000a",
+                    "surface": "#0f141b",
+                    "secondary-container": "#00cb69",
+                    "secondary": "#3fe882",
+                    "on-error": "#690005",
+                    "surface-container-low": "#171c23",
+                    "tertiary-container": "#ffdb79",
+                    "background": "#0f141b",
+                    "on-tertiary-fixed-variant": "#584400",
+                    "outline": "#849585",
+                    "on-secondary-fixed": "#00210c",
+                    "surface-variant": "#30353d",
+                    "on-tertiary": "#3d2f00",
+                    "secondary-fixed-dim": "#37e27d",
+                    "on-tertiary-fixed": "#241a00",
+                    "inverse-on-surface": "#2c3138",
+                    "outline-variant": "#3b4b3d",
+                    "surface-container-high": "#252a32",
+                    "primary-fixed-dim": "#00e479",
+                    "on-primary": "#003919",
+                    "tertiary-fixed": "#ffe08d",
+                    "surface-container-highest": "#30353d",
+                    "primary-fixed": "#60ff99",
+                    "primary": "#f1ffef"
+                },
+                "borderRadius": { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                "spacing": { "xl": "64px", "lg": "40px", "xs": "8px", "md": "24px", "sm": "16px", "margin": "24px", "base": "4px", "gutter": "16px" },
+                "fontFamily": {
+                    "headline-lg": ["Bebas Neue"], "headline-xl": ["Bebas Neue"], "headline-md": ["Bebas Neue"],
+                    "body-lg": ["JetBrains Mono"], "code-sm": ["JetBrains Mono"], "body-md": ["JetBrains Mono"],
+                    "headline-lg-mobile": ["Bebas Neue"], "label-md": ["JetBrains Mono"]
+                },
+                "fontSize": {
+                    "headline-lg": ["40px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                    "headline-xl": ["64px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "code-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "body-md": ["14px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "500"}]
                 }
             }
         }
-    </script>
+    }
+</script>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
 <div class="scanline"></div>
@@ -173,7 +173,6 @@
 <!-- Background Layer -->
 <div class="absolute inset-0 z-0">
 <img alt="Gaming Background" class="w-full h-full object-cover bg-zoom opacity-60" src="images/acceuile.jpg"/>
-<!-- Overlay for readability & aesthetic -->
 <div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background"></div>
 <div class="absolute inset-0 bg-primary/5 mix-blend-overlay"></div>
 <div class="absolute inset-0 terminal-grid opacity-30 pointer-events-none"></div>
@@ -217,304 +216,497 @@
 <button class="filter-btn border border-outline-variant text-on-surface-variant px-sm py-xs font-label-md text-label-md transition-all hover:border-primary hover:text-primary flex-shrink-0" data-filter="racing">RACING</button>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-gutter" id="game-grid">
-<!-- Game Card 1 -->
+<!-- Game Card 1: FIFA 19 -->
 <div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="sport">
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
 <img alt="FIFA 19" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/fifa19.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2019</div>
+<div class="absolute top-2 left-2 z-10 bg-green-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">✓ Tous PC</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">3 000 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary font-bold text-body-md truncate">FIFA 19</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>SIZE: 65GB</span>
-<span>VER: 1.0.2</span>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 65 GO requis
 </div>
-<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">
-                        $ DEMANDER_PRIX
-                    </button>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ -->
+<div class="bg-green-950/40 border border-green-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <div class="flex items-center gap-1 min-w-0">
+        <span class="material-symbols-outlined text-[12px] flex-shrink-0">check_circle</span>
+        <span class="text-green-400 font-bold text-[11px] leading-tight truncate">Compatible tous laptops</span>
+    </div>
+    <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
+</div>
+<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20FIFA%2019%20prix%203000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+💬 COMMANDER
+</a>
 </div>
 </div>
-<!-- Game Card 2 - FIFA 13 -->
-<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<!-- Game Card 2: FIFA 13 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="sport">
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
 <img alt="FIFA 13" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/fifa13.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2013</div>
+<div class="absolute top-2 left-2 z-10 bg-green-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">✓ Tous PC</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">1 500 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary font-bold text-body-md truncate">FIFA 13</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>SIZE: 35GB</span>
-<span>VER: 1.0.0</span>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 10 GO requis
 </div>
-<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">
-                        $ DEMANDER_PRIX
-                    </button>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ -->
+<div class="bg-green-950/40 border border-green-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <div class="flex items-center gap-1 min-w-0">
+        <span class="material-symbols-outlined text-[12px] flex-shrink-0">check_circle</span>
+        <span class="text-green-400 font-bold text-[11px] leading-tight truncate">Compatible tous laptops</span>
+    </div>
+    <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
+</div>
+<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20FIFA%2013%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+💬 COMMANDER
+</a>
 </div>
 </div>
-<!-- Game Card 3 - FIFA 11 -->
-<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<!-- Game Card 3: FIFA 11 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="sport">
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
 <img alt="FIFA 11" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/FIFA11.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2011</div>
+<div class="absolute top-2 left-2 z-10 bg-green-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">✓ Tous PC</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">1 000 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary font-bold text-body-md truncate">FIFA 11</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>SIZE: 15GB</span>
-<span>VER: 1.0.0</span>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 8 GO requis
 </div>
-<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">
-                        $ DEMANDER_PRIX
-                    </button>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ -->
+<div class="bg-green-950/40 border border-green-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <div class="flex items-center gap-1 min-w-0">
+        <span class="material-symbols-outlined text-[12px] flex-shrink-0">check_circle</span>
+        <span class="text-green-400 font-bold text-[11px] leading-tight truncate">Compatible tous laptops</span>
+    </div>
+    <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
+</div>
+<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20FIFA%2011%20prix%201000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+💬 COMMANDER
+</a>
 </div>
 </div>
-<!-- Game Card 4 - PROTOTYPE 1 -->
-<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<!-- Game Card 4: PROTOTYPE 1 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="action">
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
 <img alt="PROTOTYPE 1" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/prototype1.png"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">BETA</div>
+<div class="absolute top-2 left-2 z-10 bg-green-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">✓ Tous PC</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">1 500 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary font-bold text-body-md truncate">PROTOTYPE 1</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>SIZE: 50GB</span>
-<span>VER: 0.1.0</span>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 8 GO requis
 </div>
-<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">
-                        $ DEMANDER_PRIX
-                    </button>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ -->
+<div class="bg-green-950/40 border border-green-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <div class="flex items-center gap-1 min-w-0">
+        <span class="material-symbols-outlined text-[12px] flex-shrink-0">check_circle</span>
+        <span class="text-green-400 font-bold text-[11px] leading-tight truncate">Compatible tous laptops</span>
+    </div>
+    <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
+</div>
+<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20PROTOTYPE%201%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+💬 COMMANDER
+</a>
 </div>
 </div>
-<!-- Game Card 5 - PROTOTYPE 2 -->
-<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<!-- Game Card 5: PROTOTYPE 2 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="action">
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
 <img alt="PROTOTYPE 2" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Prototype2.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">BETA</div>
+<div class="absolute top-2 left-2 z-10 bg-green-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">✓ Tous PC</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">1 500 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary font-bold text-body-md truncate">PROTOTYPE 2</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>SIZE: 55GB</span>
-<span>VER: 0.2.0</span>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 10 GO requis
 </div>
-<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">
-                        $ DEMANDER_PRIX
-                    </button>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ -->
+<div class="bg-green-950/40 border border-green-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <div class="flex items-center gap-1 min-w-0">
+        <span class="material-symbols-outlined text-[12px] flex-shrink-0">check_circle</span>
+        <span class="text-green-400 font-bold text-[11px] leading-tight truncate">Compatible tous laptops</span>
+    </div>
+    <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
+</div>
+<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20PROTOTYPE%202%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+💬 COMMANDER
+</a>
 </div>
 </div>
-<!-- COD MW3 -->
-<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<!-- Game Card 6: COD MW3 (2011) -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="fps">
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
 <img alt="COD MW3" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Call_of_Duty_MW3.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2011</div>
+<div class="absolute top-2 left-2 z-10 bg-green-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">✓ Tous PC</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">1 500 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary font-bold text-body-md truncate">COD MW3</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>SIZE: 120GB</span>
-<span>VER: 4.1.0</span>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 16 GO requis
 </div>
-<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ -->
+<div class="bg-green-950/40 border border-green-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <div class="flex items-center gap-1 min-w-0">
+        <span class="material-symbols-outlined text-[12px] flex-shrink-0">check_circle</span>
+        <span class="text-green-400 font-bold text-[11px] leading-tight truncate">Compatible tous laptops</span>
+    </div>
+    <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
+</div>
+<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%20MW3%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+💬 COMMANDER
+</a>
 </div>
 </div>
-<!-- Call of Duty 4 Modern Warfare -->
-<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<!-- Game Card 7: COD 4 Modern Warfare -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="fps">
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
 <img alt="COD 4 Modern Warfare" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Call_of_Duty4_Modern_Warfare.jpeg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2007</div>
+<div class="absolute top-2 left-2 z-10 bg-green-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">✓ Tous PC</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">1 000 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary font-bold text-body-md truncate">COD 4 Modern Warfare</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>SIZE: 18GB</span>
-<span>VER: 1.7</span>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 8 GO requis
 </div>
-<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ -->
+<div class="bg-green-950/40 border border-green-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <div class="flex items-center gap-1 min-w-0">
+        <span class="material-symbols-outlined text-[12px] flex-shrink-0">check_circle</span>
+        <span class="text-green-400 font-bold text-[11px] leading-tight truncate">Compatible tous laptops</span>
+    </div>
+    <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
+</div>
+<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%204%20Modern%20Warfare%20prix%201000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+💬 COMMANDER
+</a>
 </div>
 </div>
-<!-- Call of Duty Black Ops 1 -->
-<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<!-- Game Card 8: COD Black Ops 1 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="fps">
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
 <img alt="COD Black Ops 1" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Call_of_Duty_Black_Ops1.jpeg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2010</div>
+<div class="absolute top-2 left-2 z-10 bg-green-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">✓ Tous PC</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">1 500 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary font-bold text-body-md truncate">COD Black Ops 1</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>SIZE: 20GB</span>
-<span>VER: 1.13</span>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 20 GO requis
 </div>
-<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ -->
+<div class="bg-green-950/40 border border-green-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <div class="flex items-center gap-1 min-w-0">
+        <span class="material-symbols-outlined text-[12px] flex-shrink-0">check_circle</span>
+        <span class="text-green-400 font-bold text-[11px] leading-tight truncate">Compatible tous laptops</span>
+    </div>
+    <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
+</div>
+<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%20Black%20Ops%201%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+💬 COMMANDER
+</a>
 </div>
 </div>
-<!-- Call of Duty MW2 -->
-<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<!-- Game Card 9: COD MW2 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="fps">
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
 <img alt="COD MW2" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Call_of_duty_MW2.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2009</div>
+<div class="absolute top-2 left-2 z-10 bg-green-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">✓ Tous PC</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">1 500 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary font-bold text-body-md truncate">COD MW2</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>SIZE: 20GB</span>
-<span>VER: 1.14</span>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 15 GO requis
 </div>
-<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ -->
+<div class="bg-green-950/40 border border-green-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <div class="flex items-center gap-1 min-w-0">
+        <span class="material-symbols-outlined text-[12px] flex-shrink-0">check_circle</span>
+        <span class="text-green-400 font-bold text-[11px] leading-tight truncate">Compatible tous laptops</span>
+    </div>
+    <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
+</div>
+<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%20MW2%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+💬 COMMANDER
+</a>
 </div>
 </div>
-<!-- Call of Duty World at War -->
-<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<!-- Game Card 10: COD World at War -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="fps">
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
 <img alt="COD World at War" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Call_of_Duty_World_at_Wart.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2008</div>
+<div class="absolute top-2 left-2 z-10 bg-green-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">✓ Tous PC</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">1 000 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary font-bold text-body-md truncate">COD World at War</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>SIZE: 18GB</span>
-<span>VER: 1.7</span>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 8 GO requis
 </div>
-<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ -->
+<div class="bg-green-950/40 border border-green-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <div class="flex items-center gap-1 min-w-0">
+        <span class="material-symbols-outlined text-[12px] flex-shrink-0">check_circle</span>
+        <span class="text-green-400 font-bold text-[11px] leading-tight truncate">Compatible tous laptops</span>
+    </div>
+    <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
+</div>
+<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%20World%20at%20War%20prix%201000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+💬 COMMANDER
+</a>
 </div>
 </div>
-<!-- Call of Duty 2 -->
-<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<!-- Game Card 11: COD 2 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="fps">
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
 <img alt="COD 2" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/call of duty 2.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2005</div>
+<div class="absolute top-2 left-2 z-10 bg-green-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">✓ Tous PC</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">1 500 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary font-bold text-body-md truncate">COD 2</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>SIZE: 16GB</span>
-<span>VER: 1.3</span>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 16 GO requis
 </div>
-<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ -->
+<div class="bg-green-950/40 border border-green-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <div class="flex items-center gap-1 min-w-0">
+        <span class="material-symbols-outlined text-[12px] flex-shrink-0">check_circle</span>
+        <span class="text-green-400 font-bold text-[11px] leading-tight truncate">Compatible tous laptops</span>
+    </div>
+    <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
+</div>
+<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%202%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+💬 COMMANDER
+</a>
 </div>
 </div>
-<!-- NBA 2K19 -->
-<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<!-- Game Card 12: NBA 2K19 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="sport">
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
 <img alt="NBA 2K19" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/NBA-2K19.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2018</div>
+<div class="absolute top-2 left-2 z-10 bg-yellow-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">⚠ GPU requis</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">2 500 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary font-bold text-body-md truncate">NBA 2K19</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>SIZE: 130GB</span>
-<span>VER: 1.0</span>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 80 GO requis
 </div>
-<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ (JAUNE) -->
+<div class="bg-yellow-950/40 border border-yellow-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <div class="flex items-start gap-1">
+        <span class="material-symbols-outlined text-[12px] flex-shrink-0 mt-0.5">warning</span>
+        <span class="text-yellow-400 font-bold text-[11px] leading-tight">GPU dédié</span>
+    </div>
+    <span class="text-yellow-400 font-bold text-[11px] leading-tight ml-[20px]">requis</span>
+    <div class="text-yellow-500/80 text-[10px] font-code-sm mt-1 leading-tight">GTX 1050 · 8 GO RAM minimum</div>
+</div>
+<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20NBA%202K19%20prix%202500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+💬 COMMANDER
+</a>
 </div>
 </div>
-<!-- Mortal Kombat -->
-<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<!-- Game Card 13: Mortal Kombat (2011) -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="combat">
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
 <img alt="Mortal Kombat" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Mortal-kombat.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2011</div>
+<div class="absolute top-2 left-2 z-10 bg-green-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">✓ Tous PC</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">1 500 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary font-bold text-body-md truncate">MORTAL KOMBAT</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>SIZE: 40GB</span>
-<span>VER: ULTIMATE</span>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 40 GO requis
 </div>
-<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ -->
+<div class="bg-green-950/40 border border-green-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <div class="flex items-center gap-1 min-w-0">
+        <span class="material-symbols-outlined text-[12px] flex-shrink-0">check_circle</span>
+        <span class="text-green-400 font-bold text-[11px] leading-tight truncate">Compatible tous laptops</span>
+    </div>
+    <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
+</div>
+<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20MORTAL%20KOMBAT%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+💬 COMMANDER
+</a>
 </div>
 </div>
-<!-- Mortal Kombat X -->
-<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<!-- Game Card 14: Mortal Kombat X -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="combat">
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
 <img alt="Mortal Kombat X" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Mortal-Kombat-X.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2015</div>
+<div class="absolute top-2 left-2 z-10 bg-green-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">✓ Tous PC</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">2 000 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary font-bold text-body-md truncate">MORTAL KOMBAT X</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>SIZE: 50GB</span>
-<span>VER: ULTIMATE</span>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 50 GO requis
 </div>
-<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ -->
+<div class="bg-green-950/40 border border-green-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <div class="flex items-center gap-1 min-w-0">
+        <span class="material-symbols-outlined text-[12px] flex-shrink-0">check_circle</span>
+        <span class="text-green-400 font-bold text-[11px] leading-tight truncate">Compatible tous laptops</span>
+    </div>
+    <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
+</div>
+<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20MORTAL%20KOMBAT%20X%20prix%202000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+💬 COMMANDER
+</a>
 </div>
 </div>
-<!-- Need for Speed Most Wanted -->
-<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<!-- Game Card 15: Need for Speed Most Wanted -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="racing">
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
 <img alt="Need for Speed Most Wanted" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Need-For-Speed-Most-Wanted.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2012</div>
+<div class="absolute top-2 left-2 z-10 bg-green-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">✓ Tous PC</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">1 500 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary font-bold text-body-md truncate">NFS MOST WANTED</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>SIZE: 30GB</span>
-<span>VER: 1.0.1</span>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 30 GO requis
 </div>
-<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ -->
+<div class="bg-green-950/40 border border-green-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <div class="flex items-center gap-1 min-w-0">
+        <span class="material-symbols-outlined text-[12px] flex-shrink-0">check_circle</span>
+        <span class="text-green-400 font-bold text-[11px] leading-tight truncate">Compatible tous laptops</span>
+    </div>
+    <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
+</div>
+<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20NFS%20MOST%20WANTED%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+💬 COMMANDER
+</a>
 </div>
 </div>
-<!-- Grand Theft Auto IV -->
-<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<!-- Game Card 16: Grand Theft Auto IV -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="action">
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
 <img alt="GTA IV" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Grand-Theft-Auto-IV.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2008</div>
+<div class="absolute top-2 left-2 z-10 bg-green-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">✓ Tous PC</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">3 000 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary font-bold text-body-md truncate">GTA IV</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>SIZE: 15GB</span>
-<span>VER: COMPLETE</span>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 15 GO requis
 </div>
-<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ -->
+<div class="bg-green-950/40 border border-green-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <div class="flex items-center gap-1 min-w-0">
+        <span class="material-symbols-outlined text-[12px] flex-shrink-0">check_circle</span>
+        <span class="text-green-400 font-bold text-[11px] leading-tight truncate">Compatible tous laptops</span>
+    </div>
+    <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
+</div>
+<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20GTA%20IV%20prix%203000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+💬 COMMANDER
+</a>
 </div>
 </div>
-<!-- Shank 1 -->
-<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
+<!-- Game Card 17: Grand Theft Auto V -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="action">
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
-<img alt="Shank 1" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Shank-1.jpg"/>
+<img alt="GTA V" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Grand-Theft-Auto-V.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2010</div>
+<div class="absolute top-2 left-2 z-10 bg-green-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">✓ Tous PC</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">4 000 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
-<h3 class="text-primary font-bold text-body-md truncate">SHANK 1</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>SIZE: 3GB</span>
-<span>VER: 1.0</span>
+<h3 class="text-primary font-bold text-body-md truncate">GTA V</h3>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 76 GO requis
 </div>
-<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ -->
+<div class="bg-green-950/40 border border-green-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <div class="flex items-center gap-1 min-w-0">
+        <span class="material-symbols-outlined text-[12px] flex-shrink-0">check_circle</span>
+        <span class="text-green-400 font-bold text-[11px] leading-tight truncate">Compatible tous laptops</span>
+    </div>
+    <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
 </div>
-</div>
-<!-- Zombie Shooter -->
-<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
-<div class="relative aspect-[3/4] overflow-hidden mb-xs">
-<img alt="Zombie Shooter" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/zombie-shooter.jpg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2012</div>
-</div>
-<div class="px-xs pb-xs">
-<h3 class="text-primary font-bold text-body-md truncate">ZOMBIE SHOOTER</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>SIZE: 2GB</span>
-<span>VER: 1.0</span>
-</div>
-<button class="w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all">$ DEMANDER_PRIX</button>
+<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20GTA%20V%20prix%204000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+💬 COMMANDER
+</a>
 </div>
 </div>
+<!-- Game Card 18: Shank 1 -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="action">
+    <div class="relative aspect-[3/4] overflow-hidden mb-xs">
+        <img alt="Shank 1" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/Shank-1.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+        <div class="absolute top-2 left-2 z-10 bg-green-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">✓ Tous PC</div>
+        <div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">1 000 Gdes</div>
+    </div>
+    <div class="px-xs pb-xs">
+        <h3 class="text-primary font-bold text-body-md truncate">SHANK 1</h3>
+        <div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+            <span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 3 GO requis
+        </div>
+        <!-- BLOC COMPATIBILITÉ CORRIGÉ -->
+        <div class="bg-green-950/40 border border-green-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+            <div class="flex items-center gap-1 min-w-0">
+                <span class="material-symbols-outlined text-[12px] flex-shrink-0">check_circle</span>
+                <span class="text-green-400 font-bold text-[11px] leading-tight truncate">Compatible tous laptops</span>
+            </div>
+            <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">3 GO RAM · GPU intégré suffisant</div>
+        </div>
+        <a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20SHANK%201%20prix%201000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">💬 COMMANDER</a>
+    </div>
+</div>
+
+<!-- Game Card 18: Zombie Shooter -->
+<div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors" data-category="fps">
+    <div class="relative aspect-[3/4] overflow-hidden mb-xs">
+        <img alt="Zombie Shooter" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/zombie-shooter.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+        <div class="absolute top-2 left-2 z-10 bg-green-500 text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">✓ Tous PC</div>
+        <div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(0,255,136,0.3)]">1 000 Gdes</div>
+    </div>
+    <div class="px-xs pb-xs">
+        <h3 class="text-primary font-bold text-body-md truncate">ZOMBIE SHOOTER</h3>
+        <div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+            <span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 2 GO requis
+        </div>
+        <!-- BLOC COMPATIBILITÉ CORRIGÉ -->
+        <div class="bg-green-950/40 border border-green-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+            <div class="flex items-center gap-1 min-w-0">
+                <span class="material-symbols-outlined text-[12px] flex-shrink-0">check_circle</span>
+                <span class="text-green-400 font-bold text-[11px] leading-tight truncate">Compatible tous laptops</span>
+            </div>
+            <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">2 GO RAM · GPU intégré suffisant</div>
+        </div>
+        <a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20ZOMBIE%20SHOOTER%20prix%201000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">💬 COMMANDER</a>
+    </div>
 </div>
 </div>
 </section>
@@ -527,22 +719,28 @@
 <span class="text-secondary font-code-sm text-code-sm animate-pulse">SYSTEM STATUS: LOADING FUTURE RELEASES...</span>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-gutter">
-<!-- Game 1: GTA 6 -->
+<!-- Game 1: GTA VI -->
 <div class="group border border-outline-variant/50 bg-surface-container-low p-base hover:border-primary transition-colors">
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
 <img alt="GTA VI" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/gta6_cover.png"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">2026</div>
+<div class="absolute top-2 left-2 z-10 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">⚡ PC Gaming</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(255,80,80,0.3)]">4 000 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary font-bold text-body-md truncate">GTA VI</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>EST_SIZE: ~150GB</span>
-<span>GENRE: ACTION</span>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 150 GO estimé
+</div>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ (ROUGE) -->
+<div class="bg-red-950/40 border border-red-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <span class="text-red-400 font-bold text-[11px] leading-tight">PC gaming nécessaire</span>
+    <div class="text-red-500/80 text-[10px] font-code-sm mt-1 leading-tight">GTX 1650 · 16 GO RAM</div>
 </div>
 <span class="block w-full text-center border border-secondary/50 text-secondary py-xs text-[11px] font-code-sm bg-secondary/5">
-                        [ STATUS: DECRYPTED // INCOMING ]
-                    </span>
+[ STATUS: DECRYPTED // INCOMING ]
+</span>
+<a class="block w-full mt-xs text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20GTA%20VI%20prix%204000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">💬 COMMANDER</a>
 </div>
 </div>
 <!-- Game 2: Black Ops 6 -->
@@ -550,56 +748,73 @@
 <div class="relative aspect-[3/4] overflow-hidden mb-xs">
 <img alt="Call of Duty Black Ops 6" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" src="images/bo6_cover.png"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-<div class="absolute bottom-base left-base bg-primary/80 text-background text-[10px] px-xs font-bold">SOON</div>
+<div class="absolute top-2 left-2 z-10 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">⚡ PC Gaming</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(255,80,80,0.3)]">4 000 Gdes</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary font-bold text-body-md truncate">COD BLACK OPS 6</h3>
-<div class="flex justify-between text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm">
-<span>EST_SIZE: ~130GB</span>
-<span>GENRE: FPS</span>
+<div class="text-on-surface-variant font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 130 GO estimé
+</div>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ (ROUGE) -->
+<div class="bg-red-950/40 border border-red-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <span class="text-red-400 font-bold text-[11px] leading-tight">PC gaming nécessaire</span>
+    <div class="text-red-500/80 text-[10px] font-code-sm mt-1 leading-tight">GTX 1650 · 16 GO RAM</div>
 </div>
 <span class="block w-full text-center border border-secondary/50 text-secondary py-xs text-[11px] font-code-sm bg-secondary/5">
-                        [ STATUS: READY // DEPLOYING ]
-                    </span>
+[ STATUS: READY // DEPLOYING ]
+</span>
+<a class="block w-full mt-xs text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%20BLACK%20OPS%206%20prix%204000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">💬 COMMANDER</a>
 </div>
 </div>
 <!-- Game 3: Assassin's Creed Shadows -->
 <div class="group border border-outline-variant/30 bg-surface-container-low/50 p-base hover:border-primary/50 transition-colors">
 <div class="relative aspect-[3/4] bg-surface-container-high flex flex-col items-center justify-center mb-xs border border-dashed border-outline-variant/30">
 <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
-<span class="material-symbols-outlined text-[48px] text-primary/30 group-hover:text-primary transition-colors animate-pulse mb-sm">lock</span>
+<div class="absolute top-2 left-2 z-10 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">⚡ PC Gaming</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(255,80,80,0.3)]">4 000 Gdes</div>
+<span class="material-symbols-outlined text-[48px] text-primary/30 group-hover:text-primary transition-colors animate-pulse mb-sm z-5">lock</span>
 <span class="text-primary/70 font-code-sm text-code-sm z-10 group-hover:text-primary transition-colors">DATA LOCK [ SHADOWS ]</span>
-<div class="absolute bottom-base left-base bg-primary/30 text-primary text-[10px] px-xs font-bold">Q4 2026</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary/70 group-hover:text-primary transition-colors font-bold text-body-md truncate">AC SHADOWS</h3>
-<div class="flex justify-between text-on-surface-variant/70 font-code-sm text-code-sm mt-xs mb-sm">
-<span>EST_SIZE: ~100GB</span>
-<span>GENRE: ACTION/RPG</span>
+<div class="text-on-surface-variant/70 font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 100 GO estimé
+</div>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ (ROUGE) -->
+<div class="bg-red-950/40 border border-red-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <span class="text-red-400 font-bold text-[11px] leading-tight">PC gaming nécessaire</span>
+    <div class="text-red-500/80 text-[10px] font-code-sm mt-1 leading-tight">GTX 1650 · 16 GO RAM</div>
 </div>
 <span class="block w-full text-center border border-outline-variant/30 text-on-surface-variant/70 py-xs text-[11px] font-code-sm">
-                        [ STATUS: CLASSIFIED // QUEUED ]
-                    </span>
+[ STATUS: CLASSIFIED // QUEUED ]
+</span>
+<a class="block w-full mt-xs text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20AC%20SHADOWS%20prix%204000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">💬 COMMANDER</a>
 </div>
 </div>
 <!-- Game 4: Monster Hunter Wilds -->
 <div class="group border border-outline-variant/30 bg-surface-container-low/50 p-base hover:border-primary/50 transition-colors">
 <div class="relative aspect-[3/4] bg-surface-container-high flex flex-col items-center justify-center mb-xs border border-dashed border-outline-variant/30">
 <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
-<span class="material-symbols-outlined text-[48px] text-primary/30 group-hover:text-primary transition-colors animate-pulse mb-sm">lock</span>
+<div class="absolute top-2 left-2 z-10 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider shadow-md">⚡ PC Gaming</div>
+<div class="absolute bottom-2 left-2 z-10 bg-black/75 border border-primary/30 text-primary font-bold text-xs px-2 py-1 shadow-[0_0_8px_rgba(255,80,80,0.3)]">4 000 Gdes</div>
+<span class="material-symbols-outlined text-[48px] text-primary/30 group-hover:text-primary transition-colors animate-pulse mb-sm z-5">lock</span>
 <span class="text-primary/70 font-code-sm text-code-sm z-10 group-hover:text-primary transition-colors">DATA LOCK [ MH_WILDS ]</span>
-<div class="absolute bottom-base left-base bg-primary/30 text-primary text-[10px] px-xs font-bold">SOON</div>
 </div>
 <div class="px-xs pb-xs">
 <h3 class="text-primary/70 group-hover:text-primary transition-colors font-bold text-body-md truncate">MH WILDS</h3>
-<div class="flex justify-between text-on-surface-variant/70 font-code-sm text-code-sm mt-xs mb-sm">
-<span>EST_SIZE: ~90GB</span>
-<span>GENRE: ACTION/RPG</span>
+<div class="text-on-surface-variant/70 font-code-sm text-code-sm mt-xs mb-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary/70">database</span> 90 GO estimé
+</div>
+<!-- BLOC COMPATIBILITÉ CORRIGÉ (ROUGE) -->
+<div class="bg-red-950/40 border border-red-500/30 p-2 mb-sm flex flex-col overflow-hidden">
+    <span class="text-red-400 font-bold text-[11px] leading-tight">PC gaming nécessaire</span>
+    <div class="text-red-500/80 text-[10px] font-code-sm mt-1 leading-tight">GTX 1650 · 16 GO RAM</div>
 </div>
 <span class="block w-full text-center border border-outline-variant/30 text-on-surface-variant/70 py-xs text-[11px] font-code-sm">
-                        [ STATUS: CLASSIFIED // QUEUED ]
-                    </span>
-</div>
+[ STATUS: CLASSIFIED // QUEUED ]
+</span>
+<a class="block w-full mt-xs text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20MH%20WILDS%20prix%204000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">💬 COMMANDER</a>
 </div>
 </div>
 </div>
@@ -893,4 +1108,5 @@
         link.addEventListener('click', closeMobileMenu);
     });
 </script>
-</body></html>
+</body>
+</html>
