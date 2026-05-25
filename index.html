@@ -15,6 +15,36 @@
 <style>
     @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
     .cursor-blink { animation: blink 1s step-end infinite; }
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 100;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #25D366;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+        animation: float 3s ease-in-out infinite;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    }
+    .whatsapp-float svg {
+        width: 35px;
+        height: 35px;
+        fill: white;
+    }
     .scanline {
         width: 100%; height: 2px;
         background: rgba(0, 255, 136, 0.05);
@@ -237,8 +267,9 @@
     </div>
     <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
 </div>
-<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20FIFA%2019%20prix%203000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
-💬 COMMANDER
+<a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20FIFA%2019%20prix%203000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+COMMANDER
 </a>
 </div>
 </div>
@@ -263,8 +294,9 @@
     </div>
     <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
 </div>
-<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20FIFA%2013%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
-💬 COMMANDER
+<a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20FIFA%2013%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+COMMANDER
 </a>
 </div>
 </div>
@@ -289,8 +321,9 @@
     </div>
     <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
 </div>
-<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20FIFA%2011%20prix%201000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
-💬 COMMANDER
+<a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20FIFA%2011%20prix%201000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+COMMANDER
 </a>
 </div>
 </div>
@@ -315,8 +348,9 @@
     </div>
     <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
 </div>
-<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20PROTOTYPE%201%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
-💬 COMMANDER
+<a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20PROTOTYPE%201%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+COMMANDER
 </a>
 </div>
 </div>
@@ -341,8 +375,9 @@
     </div>
     <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
 </div>
-<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20PROTOTYPE%202%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
-💬 COMMANDER
+<a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20PROTOTYPE%202%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+COMMANDER
 </a>
 </div>
 </div>
@@ -367,8 +402,9 @@
     </div>
     <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
 </div>
-<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%20MW3%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
-💬 COMMANDER
+<a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%20MW3%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+COMMANDER
 </a>
 </div>
 </div>
@@ -393,8 +429,9 @@
     </div>
     <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
 </div>
-<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%204%20Modern%20Warfare%20prix%201000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
-💬 COMMANDER
+<a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%204%20Modern%20Warfare%20prix%201000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+COMMANDER
 </a>
 </div>
 </div>
@@ -419,8 +456,9 @@
     </div>
     <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
 </div>
-<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%20Black%20Ops%201%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
-💬 COMMANDER
+<a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%20Black%20Ops%201%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+COMMANDER
 </a>
 </div>
 </div>
@@ -445,8 +483,9 @@
     </div>
     <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
 </div>
-<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%20MW2%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
-💬 COMMANDER
+<a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%20MW2%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+COMMANDER
 </a>
 </div>
 </div>
@@ -471,8 +510,9 @@
     </div>
     <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
 </div>
-<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%20World%20at%20War%20prix%201000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
-💬 COMMANDER
+<a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%20World%20at%20War%20prix%201000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+COMMANDER
 </a>
 </div>
 </div>
@@ -497,8 +537,9 @@
     </div>
     <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
 </div>
-<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%202%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
-💬 COMMANDER
+<a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%202%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+COMMANDER
 </a>
 </div>
 </div>
@@ -524,8 +565,9 @@
     <span class="text-yellow-400 font-bold text-[11px] leading-tight ml-[20px]">requis</span>
     <div class="text-yellow-500/80 text-[10px] font-code-sm mt-1 leading-tight">GTX 1050 · 8 GO RAM minimum</div>
 </div>
-<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20NBA%202K19%20prix%202500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
-💬 COMMANDER
+<a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20NBA%202K19%20prix%202500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+COMMANDER
 </a>
 </div>
 </div>
@@ -550,8 +592,9 @@
     </div>
     <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
 </div>
-<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20MORTAL%20KOMBAT%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
-💬 COMMANDER
+<a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20MORTAL%20KOMBAT%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+COMMANDER
 </a>
 </div>
 </div>
@@ -576,8 +619,9 @@
     </div>
     <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
 </div>
-<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20MORTAL%20KOMBAT%20X%20prix%202000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
-💬 COMMANDER
+<a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20MORTAL%20KOMBAT%20X%20prix%202000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+COMMANDER
 </a>
 </div>
 </div>
@@ -602,8 +646,9 @@
     </div>
     <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
 </div>
-<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20NFS%20MOST%20WANTED%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
-💬 COMMANDER
+<a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20NFS%20MOST%20WANTED%20prix%201500gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+COMMANDER
 </a>
 </div>
 </div>
@@ -628,8 +673,9 @@
     </div>
     <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
 </div>
-<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20GTA%20IV%20prix%203000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
-💬 COMMANDER
+<a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20GTA%20IV%20prix%203000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+COMMANDER
 </a>
 </div>
 </div>
@@ -654,8 +700,9 @@
     </div>
     <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">8 GO RAM · GPU intégré suffisant</div>
 </div>
-<a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20GTA%20V%20prix%204000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
-💬 COMMANDER
+<a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20GTA%20V%20prix%204000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+COMMANDER
 </a>
 </div>
 </div>
@@ -680,7 +727,7 @@
             </div>
             <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">3 GO RAM · GPU intégré suffisant</div>
         </div>
-        <a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20SHANK%201%20prix%201000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">💬 COMMANDER</a>
+        <a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20SHANK%201%20prix%201000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>COMMANDER</a>
     </div>
 </div>
 
@@ -705,7 +752,7 @@
             </div>
             <div class="text-green-500/80 text-[10px] font-code-sm mt-0.5 leading-tight truncate">2 GO RAM · GPU intégré suffisant</div>
         </div>
-        <a class="block w-full text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20ZOMBIE%20SHOOTER%20prix%201000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">💬 COMMANDER</a>
+        <a class="flex items-center justify-center gap-xs w-full border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20ZOMBIE%20SHOOTER%20prix%201000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>COMMANDER</a>
     </div>
 </div>
 </div>
@@ -737,10 +784,10 @@
     <span class="text-red-400 font-bold text-[11px] leading-tight">PC gaming nécessaire</span>
     <div class="text-red-500/80 text-[10px] font-code-sm mt-1 leading-tight">GTX 1650 · 16 GO RAM</div>
 </div>
-<span class="block w-full text-center border border-secondary/50 text-secondary py-xs text-[11px] font-code-sm bg-secondary/5">
+<span class="flex items-center justify-center gap-xs w-full border border-secondary/50 text-secondary py-xs text-[11px] font-code-sm bg-secondary/5">
 [ STATUS: DECRYPTED // INCOMING ]
 </span>
-<a class="block w-full mt-xs text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20GTA%20VI%20prix%204000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">💬 COMMANDER</a>
+<a class="flex items-center justify-center gap-xs w-full mt-xs border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20GTA%20VI%20prix%204000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>COMMANDER</a>
 </div>
 </div>
 <!-- Game 2: Black Ops 6 -->
@@ -761,10 +808,10 @@
     <span class="text-red-400 font-bold text-[11px] leading-tight">PC gaming nécessaire</span>
     <div class="text-red-500/80 text-[10px] font-code-sm mt-1 leading-tight">GTX 1650 · 16 GO RAM</div>
 </div>
-<span class="block w-full text-center border border-secondary/50 text-secondary py-xs text-[11px] font-code-sm bg-secondary/5">
+<span class="flex items-center justify-center gap-xs w-full border border-secondary/50 text-secondary py-xs text-[11px] font-code-sm bg-secondary/5">
 [ STATUS: READY // DEPLOYING ]
 </span>
-<a class="block w-full mt-xs text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%20BLACK%20OPS%206%20prix%204000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">💬 COMMANDER</a>
+<a class="flex items-center justify-center gap-xs w-full mt-xs border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20COD%20BLACK%20OPS%206%20prix%204000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>COMMANDER</a>
 </div>
 </div>
 <!-- Game 3: Assassin's Creed Shadows -->
@@ -786,10 +833,10 @@
     <span class="text-red-400 font-bold text-[11px] leading-tight">PC gaming nécessaire</span>
     <div class="text-red-500/80 text-[10px] font-code-sm mt-1 leading-tight">GTX 1650 · 16 GO RAM</div>
 </div>
-<span class="block w-full text-center border border-outline-variant/30 text-on-surface-variant/70 py-xs text-[11px] font-code-sm">
+<span class="flex items-center justify-center gap-xs w-full border border-outline-variant/30 text-on-surface-variant/70 py-xs text-[11px] font-code-sm">
 [ STATUS: CLASSIFIED // QUEUED ]
 </span>
-<a class="block w-full mt-xs text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20AC%20SHADOWS%20prix%204000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">💬 COMMANDER</a>
+<a class="flex items-center justify-center gap-xs w-full mt-xs border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20AC%20SHADOWS%20prix%204000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>COMMANDER</a>
 </div>
 </div>
 <!-- Game 4: Monster Hunter Wilds -->
@@ -811,10 +858,10 @@
     <span class="text-red-400 font-bold text-[11px] leading-tight">PC gaming nécessaire</span>
     <div class="text-red-500/80 text-[10px] font-code-sm mt-1 leading-tight">GTX 1650 · 16 GO RAM</div>
 </div>
-<span class="block w-full text-center border border-outline-variant/30 text-on-surface-variant/70 py-xs text-[11px] font-code-sm">
+<span class="flex items-center justify-center gap-xs w-full border border-outline-variant/30 text-on-surface-variant/70 py-xs text-[11px] font-code-sm">
 [ STATUS: CLASSIFIED // QUEUED ]
 </span>
-<a class="block w-full mt-xs text-center border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20MH%20WILDS%20prix%204000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank">💬 COMMANDER</a>
+<a class="flex items-center justify-center gap-xs w-full mt-xs border border-secondary text-secondary py-xs text-[12px] font-bold hover:bg-secondary hover:text-background transition-all" href="https://wa.me/50933428510?text=Slt%20je%20veux%20MH%20WILDS%20prix%204000gdes%20a%20kel%20heure%20je%20peux%20passer%20pou%20installation" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>COMMANDER</a>
 </div>
 </div>
 </div>
@@ -914,6 +961,10 @@
 </div>
 </div>
 </section>
+<!-- Bouton WhatsApp Flottant -->
+<a href="https://wa.me/50933428510?text=Bonjour%20GameZone.ht%2C%20je%20voudrais%20commander%20des%20jeux%20PC." target="_blank" class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
 <!-- Bouton Retour en haut -->
 <button class="fixed bottom-6 right-6 z-50 bg-surface-container border border-primary text-primary w-12 h-12 flex items-center justify-center font-headline-md hover:bg-primary hover:text-background transition-all duration-300 opacity-0 translate-y-4 pointer-events-none shadow-[0_0_12px_rgba(0,255,136,0.3)]" id="back-to-top" aria-label="Retour en haut" title="Retour en haut">▲</button>
 <!-- Footer -->
